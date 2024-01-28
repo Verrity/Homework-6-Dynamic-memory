@@ -20,6 +20,7 @@ int main(){
     unsigned int count_free = SUBDIR_SIZE;
     // Помечаем все записи как пустые, unsigned char для меньшей памяти
     char* subdir_list = calloc(SUBDIR_SIZE, sizeof(unsigned char));
+    if (subdir_list == NULL) EXITMSG("subdir_list creation error");
 
     enum Subdir_command_list cmd = SUBDIR_CMD_NONE;
 
